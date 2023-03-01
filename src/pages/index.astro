@@ -1,15 +1,109 @@
 ---
+import Team from "../components/Team.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<header class="absolute top-0 w-full bg-primary/80">
+		<section class="container mx-auto px-4">
+			<img
+				src="/logo.png"
+				alt="Logo de Torrejón Rugby Club"
+				class="block"
+			/>
+		</section>
+	</header>
+	<main>
+		<img src="/dia-club.jpeg" alt="" class="w-full" />
+
+		<section class="container mx-auto px-4 py-8">
+			<h2 class="text-3xl font-extrabold text-primary">
+				¿Quieres jugar con nosotros?
+			</h2>
+			<p class="text-lg">¡Estaremos encantados de recibirte!</p>
+
+			<h3 class="text-lg font-bold my-4">
+				Nuestros <span class="text-primary">equipos</span> y <span
+					class="text-primary">horarios</span
+				> de entrenamientos:
+			</h3>
+
+			<div class="grid grid-cols-3 gap-2">
+				<Team
+					title="Senior masculino"
+					days="Martes, jueves y viernes"
+					hours="20:15 a 22:00"
+				/>
+				<Team
+					title="Sub 18"
+					days="Martes y jueves"
+					hours="18:00 a 20:30"
+				/>
+				<Team
+					title="Escuela"
+					days="Martes y jueves"
+					hours="17:30 a 18:30"
+				/>
+			</div>
+		</section>
+
+		<section class="">
+			<div class="container mx-auto px-4 mb-4">
+				<h2 class="text-3xl font-extrabold text-primary">
+					Nuestro campo
+				</h2>
+			</div>
+			<iframe
+				width="100%"
+				height="450"
+				style="border:0"
+				loading="lazy"
+				allowfullscreen
+				referrerpolicy="no-referrer-when-downgrade"
+				src="https://www.google.com/maps/embed/v1/place?key=${}&q=Polideportivo+Joaquín+Blume+Torrejón+de+Ardoz"
+			>
+			</iframe>
+		</section>
+
+		<section class="p-4 bg-gray-300">
+			<div class="container mx-auto">
+				Escríbenos a <a
+					href="mailto:info@rugbytorrejon.com"
+					class="text-primary">info@rugbytorrejon.com</a
+				> o rellena el siguiente formulario:
+				<form></form>
+			</div>
+		</section>
+	</main>
+	<footer class="container mx-auto px-4">
+		<section class="flex flex-wrap gap-2 my-4">
+			<a href="https://www.carrier.com/commercial/es/es/" target="_blank">
+				<img src="/carrier.jpg" alt="" class="w-40 object-cover" />
+			</a>
+			<div>
+				<img src="/Logo-Cricket.jpg" alt="" class="w-40 object-cover" />
+			</div>
+			<div>
+				<img src="/logo-tr2.png" alt="" class="w-40 object-cover" />
+			</div>
+			<a href="http://martinagenjoinstalaciones.es/" target="_blank">
+				<img
+					src="/banner_ajsuministros.png"
+					alt=""
+					class="w-40 object-cover"
+				/>
+			</a>
+		</section>
+		<section class="flex justify-end">
+			<a href="https://rugbymadrid.com" target="_blank">
+				<img src="/LOGO-FRM_mod.jpg" alt="" />
+			</a>
+			<a
+				href="http://www.ayto-torrejon.es/plantilla.asp?nPagina=1&ccClave=154"
+				target="_blank"
+			>
+				<img src="/ayuntamiento.jpeg" alt="" class="w-28" />
+			</a>
+		</section>
+	</footer>
+</Layout>
