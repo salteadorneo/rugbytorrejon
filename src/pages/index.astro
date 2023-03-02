@@ -1,5 +1,8 @@
 ---
+import Facebook from "../components/Facebook.astro";
 import Team from "../components/Team.astro";
+import Tiktok from "../components/Tiktok.astro";
+import Twitter from "../components/Twitter.astro";
 import Layout from "../layouts/Layout.astro";
 
 const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
@@ -15,7 +18,7 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 				alt="Logo de Torrejón Rugby Club"
 				class="block"
 			/>
-			<nav>
+			<nav class="hidden md:block">
 				<ul class="flex gap-4">
 					<li>
 						<a href="/" class="text-white">Inicio</a>
@@ -29,28 +32,10 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 						<a href="/#contacto" class="text-white">Contacto</a>
 					</li>
 					<li>
-						<a
-							href="https://www.facebook.com/rugbytorrejon"
-							target="_blank"
-						>
-							facebook
-						</a>
+						<Facebook />
 					</li>
 					<li>
-						<a
-							href="https://twitter.com/rugbytorrejon"
-							target="_blank"
-						>
-							twitter
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.tiktok.com/tag/rugbytorrejon"
-							target="_blank"
-						>
-							tiktok
-						</a>
+						<Twitter />
 					</li>
 				</ul>
 			</nav>
@@ -118,34 +103,37 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 			</div>
 		</section>
 	</main>
-	<footer class="container mx-auto px-4">
-		<section class="flex flex-wrap gap-2 my-4">
+	<footer class="container mx-auto p-4">
+		<section class="flex flex-wrap items-center justify-center gap-4 my-4">
 			<a href="https://www.carrier.com/commercial/es/es/" target="_blank">
-				<img src="/carrier.jpg" alt="" class="w-40 object-cover" />
+				<img src="/carrier.jpg" alt="" class="h-12 object-cover" />
 			</a>
 			<div>
-				<img src="/Logo-Cricket.jpg" alt="" class="w-40 object-cover" />
+				<img src="/Logo-Cricket.jpg" alt="" class="h-12 object-cover" />
 			</div>
 			<div>
-				<img src="/logo-tr2.png" alt="" class="w-40 object-cover" />
+				<img src="/logo-tr2.png" alt="" class="h-12 object-cover" />
 			</div>
 			<a href="http://martinagenjoinstalaciones.es/" target="_blank">
 				<img
-					src="/banner_ajsuministros.png"
+					src="/ajs-suministros.png"
 					alt=""
-					class="w-40 object-cover"
+					class="h-12 object-cover"
 				/>
 			</a>
+			<a href="http://martinagenjoinstalaciones.es/" target="_blank">
+				<img src="/mai.png" alt="" class="h-12 object-cover" />
+			</a>
 		</section>
-		<section class="flex justify-end">
+		<section class="flex justify-between">
 			<a href="https://rugbymadrid.com" target="_blank">
-				<img src="/LOGO-FRM_mod.jpg" alt="" />
+				<img src="/LOGO-FRM_mod.jpg" alt="" class="h-12" />
 			</a>
 			<a
 				href="http://www.ayto-torrejon.es/plantilla.asp?nPagina=1&ccClave=154"
 				target="_blank"
 			>
-				<img src="/ayuntamiento.jpeg" alt="" class="w-28" />
+				<img src="/ayuntamiento.jpeg" alt="" class="h-12" />
 			</a>
 		</section>
 	</footer>
