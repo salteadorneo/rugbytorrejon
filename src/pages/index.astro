@@ -2,23 +2,64 @@
 import Team from "../components/Team.astro";
 import Layout from "../layouts/Layout.astro";
 
-const GMAPS_API = 'AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ'
+const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 ---
 
 <Layout>
-	<header class="absolute top-0 w-full bg-primary/80">
-		<section class="container mx-auto px-4">
+	<header class="bg-primary">
+		<section
+			class="container mx-auto px-4 flex items-center justify-between"
+		>
 			<img
 				src="/logo.png"
 				alt="Logo de Torrejón Rugby Club"
 				class="block"
 			/>
+			<nav>
+				<ul class="flex gap-4">
+					<li>
+						<a href="/" class="text-white">Inicio</a>
+					</li>
+					<li>
+						<a href="/#ven-a-jugar" class="text-white"
+							>¿Quiénes somos?</a
+						>
+					</li>
+					<li>
+						<a href="/#contacto" class="text-white">Contacto</a>
+					</li>
+					<li>
+						<a
+							href="https://www.facebook.com/rugbytorrejon"
+							target="_blank"
+						>
+							facebook
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://twitter.com/rugbytorrejon"
+							target="_blank"
+						>
+							twitter
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://www.tiktok.com/tag/rugbytorrejon"
+							target="_blank"
+						>
+							tiktok
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</section>
 	</header>
 	<main>
-		<img src="/dia-club.jpeg" alt="" class="w-full" />
+		<!-- <img src="/dia-club.jpeg" alt="" class="w-full" /> -->
 
-		<section class="container mx-auto px-4 py-8">
+		<section id="ven-a-jugar" class="container mx-auto px-4 py-8">
 			<h2 class="text-3xl font-extrabold text-primary">
 				¿Quieres jugar con nosotros?
 			</h2>
@@ -49,7 +90,7 @@ const GMAPS_API = 'AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ'
 			</div>
 		</section>
 
-		<section class="">
+		<section id="nuestro-campo" class="">
 			<div class="container mx-auto px-4 mb-4">
 				<h2 class="text-3xl font-extrabold text-primary">
 					Nuestro campo
@@ -62,12 +103,12 @@ const GMAPS_API = 'AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ'
 				loading="lazy"
 				allowfullscreen
 				referrerpolicy="no-referrer-when-downgrade"
-				src="https://www.google.com/maps/embed/v1/place?key=${GMAPS_API}&q=Polideportivo+Joaquín+Blume+Torrejón+de+Ardoz"
+				src={`https://www.google.com/maps/embed/v1/place?key=${GMAPS_API}&q=Club+Deportivo+Elemental+Torrejón+Rugby+Club+C.+de+Joaquín+Blume,+28850+Madrid`}
 			>
 			</iframe>
 		</section>
 
-		<section class="p-4 bg-gray-300">
+		<section id="contacto" class="p-4 bg-gray-300">
 			<div class="container mx-auto">
 				Escríbenos a <a
 					href="mailto:info@rugbytorrejon.com"
