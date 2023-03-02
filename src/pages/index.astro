@@ -1,6 +1,8 @@
 ---
 import Team from "../components/Team.astro";
 import Layout from "../layouts/Layout.astro";
+
+const GMAPS_API = 'AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ'
 ---
 
 <Layout>
@@ -60,7 +62,7 @@ import Layout from "../layouts/Layout.astro";
 				loading="lazy"
 				allowfullscreen
 				referrerpolicy="no-referrer-when-downgrade"
-				src="https://www.google.com/maps/embed/v1/place?key=${}&q=Polideportivo+Joaquín+Blume+Torrejón+de+Ardoz"
+				src="https://www.google.com/maps/embed/v1/place?key=${GMAPS_API}&q=Polideportivo+Joaquín+Blume+Torrejón+de+Ardoz"
 			>
 			</iframe>
 		</section>
