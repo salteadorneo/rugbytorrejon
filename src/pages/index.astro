@@ -1,60 +1,28 @@
 ---
-import Facebook from "../components/Facebook.astro";
-import Team from "../components/Team.astro";
-import Tiktok from "../components/Tiktok.astro";
-import Twitter from "../components/Twitter.astro";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Team from "../components/Team.astro";
 
 const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 ---
 
-<Layout>
-	<header class="bg-primary">
-		<section
-			class="container mx-auto px-4 flex items-center justify-between"
-		>
-			<img
-				src="/logo.png"
-				alt="Logo de Torrejón Rugby Club"
-				class="block"
-			/>
-			<nav class="hidden md:block">
-				<ul class="flex gap-4">
-					<li>
-						<a href="/" class="text-white">Inicio</a>
-					</li>
-					<li>
-						<a href="/#ven-a-jugar" class="text-white"
-							>¿Quiénes somos?</a
-						>
-					</li>
-					<li>
-						<a href="/#contacto" class="text-white">Contacto</a>
-					</li>
-					<li>
-						<Facebook />
-					</li>
-					<li>
-						<Twitter />
-					</li>
-				</ul>
-			</nav>
-		</section>
-	</header>
+<Layout
+	title="Torrejón Rugby Club"
+	description="Equipo de rugby de Torrejón de Ardoz"
+>
+	<Header />
 	<main>
 		<!-- <img src="/dia-club.jpeg" alt="" class="w-full" /> -->
 
-		<section id="ven-a-jugar" class="container mx-auto px-4 py-8">
-			<h2 class="text-3xl font-extrabold text-primary">
-				¿Quieres jugar con nosotros?
+		<section id="equipos" class="container mx-auto px-4 py-8">
+			<h2 class="font-bebas text-4xl font-bold text-primary">
+				NUESTROS EQUIPOS
 			</h2>
-			<p class="text-lg">¡Estaremos encantados de recibirte!</p>
+			<p class="text-lg">
+				¿Quieres venir a jugar? ¡Estaremos encantados de recibirte!
+			</p>
 
-			<h3 class="text-lg font-bold my-4">
-				Nuestros <span class="text-primary">equipos</span> y <span
-					class="text-primary">horarios</span
-				> de entrenamientos:
-			</h3>
+			<h3 class="text-lg font-bold my-4">Entrenamientos</h3>
 
 			<div class="grid grid-cols-3 gap-2">
 				<Team
@@ -75,9 +43,9 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 			</div>
 		</section>
 
-		<section id="nuestro-campo" class="">
+		<section id="campo" class="">
 			<div class="container mx-auto px-4 mb-4">
-				<h2 class="text-3xl font-extrabold text-primary">
+				<h2 class="font-bebas text-4xl font-bold text-primary">
 					Nuestro campo
 				</h2>
 			</div>
@@ -95,6 +63,7 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 
 		<section id="contacto" class="px-4 py-12 bg-primary text-white">
 			<div class="container mx-auto text-center">
+				<h4 class="font-bebas text-4xl font-bold">Contacto</h4>
 				Escríbenos a <a
 					href="mailto:info@rugbytorrejon.com"
 					class="text-white underline">info@rugbytorrejon.com</a
@@ -127,37 +96,62 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 			</div>
 		</section>
 	</main>
-	<footer class="container mx-auto p-4">
+	<footer class="container mx-auto p-4 text-center">
+		<h4 class="font-bebas text-3xl font-bold text-primary">
+			PATROCINADORES Y COLABORADORES
+		</h4>
 		<section class="flex flex-wrap items-center justify-center gap-4 my-4">
 			<a href="https://www.carrier.com/commercial/es/es/" target="_blank">
-				<img src="/carrier.jpg" alt="" class="h-12 object-cover" />
+				<img
+					src="/patrocinadores/carrier.jpg"
+					alt=""
+					class="h-12 object-cover"
+				/>
 			</a>
 			<div>
-				<img src="/Logo-Cricket.jpg" alt="" class="h-12 object-cover" />
+				<img
+					src="/patrocinadores/Logo-Cricket.jpg"
+					alt=""
+					class="h-12 object-cover"
+				/>
 			</div>
 			<div>
-				<img src="/logo-tr2.png" alt="" class="h-12 object-cover" />
+				<img
+					src="/patrocinadores/logo-tr2.png"
+					alt=""
+					class="h-12 object-cover"
+				/>
 			</div>
 			<a href="http://martinagenjoinstalaciones.es/" target="_blank">
 				<img
-					src="/ajs-suministros.png"
+					src="/patrocinadores/ajs-suministros.png"
 					alt=""
 					class="h-12 object-cover"
 				/>
 			</a>
 			<a href="http://martinagenjoinstalaciones.es/" target="_blank">
-				<img src="/mai.png" alt="" class="h-12 object-cover" />
+				<img
+					src="/patrocinadores/mai.png"
+					alt=""
+					class="h-12 object-cover"
+				/>
 			</a>
 		</section>
-		<section class="flex justify-between">
+		<section class="flex items-end justify-between">
 			<a href="https://rugbymadrid.com" target="_blank">
-				<img src="/LOGO-FRM_mod.jpg" alt="" class="h-12" />
+				<img src="/LOGO-FRM_mod.jpg" alt="" class="h-16" />
 			</a>
+			<a
+				href="http://rugbymadrid.com/seguro-accidente-deportivo/"
+				target="_blank"
+				class="text-sm text-gray-500"
+				>Información sobre Seguro accidente médico</a
+			>
 			<a
 				href="http://www.ayto-torrejon.es/plantilla.asp?nPagina=1&ccClave=154"
 				target="_blank"
 			>
-				<img src="/ayuntamiento.jpeg" alt="" class="h-12" />
+				<img src="/ayuntamiento.jpeg" alt="" class="h-16" />
 			</a>
 		</section>
 	</footer>

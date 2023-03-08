@@ -1,0 +1,47 @@
+---
+import Facebook from "./Facebook.astro";
+import Twitter from "./Twitter.astro";
+---
+
+<header class="sticky top-0 w-full bg-primary">
+    <section
+        class="container mx-auto px-4 flex items-center justify-between gap-4"
+    >
+        <a href="/">
+            <img src="/logo.png" alt="Logo de Torrejón Rugby Club" />
+        </a>
+        <nav class="">
+            <ul class="flex gap-4">
+                <li class="hidden md:block">
+                    <a href="/#equipos" class="font-bebas text-xl text-white">
+                        Equipos
+                    </a>
+                </li>
+                <li class="hidden md:block">
+                    <a href="/#campo" class="font-bebas text-xl text-white">
+                        Campo
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="/programacion"
+                        class="font-bebas text-xl text-white"
+                    >
+                        Programación
+                    </a>
+                </li>
+                <li class="hidden md:block">
+                    <a href="/#contacto" class="font-bebas text-xl text-white">
+                        Contacto
+                    </a>
+                </li>
+                <li>
+                    <Facebook />
+                </li>
+                <li>
+                    <Twitter />
+                </li>
+            </ul>
+        </nav>
+    </section>
+</header>

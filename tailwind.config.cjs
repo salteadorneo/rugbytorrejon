@@ -5,6 +5,9 @@ module.exports = {
 		extend: {
 			colors: {
 				primary: "#740e64"
+			},
+			fontFamily: {
+				bebas: 'Bebas Neue'
 			}
 		},
 	},
