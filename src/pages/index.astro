@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Team from "../components/Team.astro";
+import Twitter from "../components/Twitter.astro";
+import Facebook from "../components/Facebook.astro";
 
 const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 ---
@@ -43,7 +45,7 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 			</div>
 		</section>
 
-		<section id="campo" class="">
+		<section id="campo">
 			<div class="container mx-auto px-4 mb-4">
 				<h2 class="font-bebas text-4xl font-bold text-primary">
 					Nuestro campo
@@ -59,6 +61,18 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 				src={`https://www.google.com/maps/embed/v1/place?key=${GMAPS_API}&q=Club+Deportivo+Elemental+Torrejón+Rugby+Club+C.+de+Joaquín+Blume,+28850+Madrid`}
 			>
 			</iframe>
+		</section>
+
+		<section class="container mx-auto p-4 text-center my-8">
+			<h4 class="font-bebas text-3xl font-bold text-primary">
+				Síguenos en redes
+			</h4>
+			<section
+				class="flex flex-wrap items-center justify-center gap-4 my-4 text-primary"
+			>
+				<Facebook />
+				<Twitter />
+			</section>
 		</section>
 
 		<section id="contacto" class="px-4 py-12 bg-primary text-white">
