@@ -17,7 +17,7 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 	<main>
 		<!-- <img src="/dia-club.jpeg" alt="" class="w-full" /> -->
 
-		<section id="equipos" class="container mx-auto px-4 py-8">
+		<section id="equipos" class="max-w-4xl mx-auto px-4 py-8">
 			<h2 class="font-bebas text-4xl font-bold text-primary">
 				NUESTROS EQUIPOS
 			</h2>
@@ -47,7 +47,7 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 		</section>
 
 		<section id="campo">
-			<div class="container mx-auto px-4 mb-4">
+			<div class="max-w-4xl mx-auto px-4 mb-4">
 				<h2 class="font-bebas text-4xl font-bold text-primary">
 					Nuestro campo
 				</h2>
@@ -60,11 +60,12 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 				allowfullscreen
 				referrerpolicy="no-referrer-when-downgrade"
 				src={`https://www.google.com/maps/embed/v1/place?key=${GMAPS_API}&q=Club+Deportivo+Elemental+Torrejón+Rugby+Club+C.+de+Joaquín+Blume,+28850+Madrid`}
+				class="max-w-6xl mx-auto"
 			>
 			</iframe>
 		</section>
 
-		<section class="container mx-auto p-4 text-center my-8">
+		<section class="max-w-4xl mx-auto p-4 text-center my-8">
 			<h4 class="font-bebas text-3xl font-bold text-primary">
 				Síguenos en redes
 			</h4>
@@ -131,7 +132,7 @@ const GMAPS_API = "AIzaSyDg2JLLD6LFhiExxxnKpotYwzH4xIdw0vQ";
 										if (Object.hasOwn(data, "errors")) {
 											status.innerHTML = data["errors"]
 												.map(
-													(error) => error["message"]
+													(error) => error["message"],
 												)
 												.join(", ");
 										} else {
